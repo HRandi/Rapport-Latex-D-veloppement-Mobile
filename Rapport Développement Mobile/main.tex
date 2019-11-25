@@ -29,7 +29,7 @@
 
 Pour compléter l'unité d'enseignement développement mobiles, on a choisi de concevoir un jeu pour titre FlyBirds. Ce rapport montre les étapes et démarches que j'ai suivi pour réaliser enfin ce projet. Le travail est sur deux plateforme Android en utilisant le langage JAVA et iOS en utilisant SWIFT. J'ai utilisé AndroidStudio\cite{AndroidStudio} vesion 3.5.2 et Xcode\cite{iOS} version 11 comme outils de développement et overleaf pour la rédaction \cite{Overleaf}.
 
-Selon le cahier de charge et les besoins\cite{Cours}, j'ai utilisé les cours, TD et TP que nous avons appris et fait en classe. Puis j'ai consulté aussi plusieurs tutoriels\cite{OpenClassroom} et forum d'entraides comme stackoverflow\cite{Stackoverflow}, github\cite{Github} pour certains problèmes que j'ai rencontré au niveau de l'utilisation de capteur.
+Selon le cahier de charge et les besoins\cite{Cours}, j'ai utilisé les cours, TD et TP que nous avons appris et fait en classe. Puis j'ai consulté aussi plusieurs tutoriels\cite{OpenClassroom} et forum d'entraides comme stackoverflow\cite{Stackoverflow}, github\cite{Github} pour certains problèmes que j'ai rencontré. Les icônes et fond d'écran utilisés tout au lond de ce projet sont disponibles sur le site de blue flappy Bird sprite\cite{Icon}.
 Dans ce rapport,je vais évoquer la structure du projet et sa  réalisation en illustrant avec des captures. Prémièrement sur le plateforme Android puis celui de iOS. Ce projet est libre et opensource, pour le télécharger voici un lien vers le dépôt github\cite{Githubd}.
 
 
@@ -84,7 +84,7 @@ g - Background.java
 
 Pour avoir une aspect attirante et un décor, c'est dans cette classe que tout cela se passe. Pour definir l'arrière plan du jeu, il y a le bitmap pour decoder le ressource qui n'est autre que le fond\cite{Images}.\newline
 
-h - Geolocalisation.java
+h - Geolocalisation
 
 Pour connaître et récupérer la position du joueur, c'est dans cette classe qu'on va définir tout les paramètres\cite{AndroidStudio} dont on a besoin. Pour simplier les choses, j'ai utilisé une fonction qui va accéder à Google Maps afin d'afficher la position réelle du chasseur.\newline
 
@@ -92,7 +92,7 @@ i - Internationalisation
 
 On connaît tous que l'internationalisation d'une application devient presque une obligation si on veut développer un jeu et le mettre dans PlayStore. Pour cela, il suffit de créer un fichier de langue dans le dossier values des ressources (res). Puis, le nom du répertoire devra avoir pour valeur values-fr pour suivre la norme ISO 639-1 d'où l'abréviation "fr".\newline
 
-j - Capture.java
+j - Capture
 
 Pour rendre le jeu interessant, on a ajouté une possibilité de prendre une photo et qui devrait apparaître sur le highscore. Pour être prudent et pour éviter le crash de l'application, on va invoquer une intension de prendre une photo via la méthode StartActivityForResult()\cite{AndroidStudio} afin d'être protéger par la méthode ResolveActivity().
 
@@ -131,7 +131,12 @@ e - Bullet.java
     \includegraphics[scale = 0.5]{logos/Bullet.png}
     \captionof{figure}{Création des munitions}
 \end{center}
+f - camera
 
+\begin{center}
+    \includegraphics[scale = 0.5]{logos/camera.png}
+    \captionof{figure}{Fonction du capture}
+\end{center}
 
 
 \section{FlyBirds : Plateforme iOS}
@@ -198,13 +203,28 @@ Capture en plein jeu :
     \captionof{figure}{Capture en plein jeu android v1.0}
 \end{center}
 
-c - Problème rencontré
+C - Double tap
 
-Dans la partie Android, j'ai eu de difficulté sur la mise en place de la géolocalisation avec la gestion de key maps. En effet, ça ne m'empêcha pas de creuser et trouver des solutions pour résoudre ce problème en utilisant les TP, support de cours et les liens utiles\cite{Cours} qu'on nous a donné en classe.
+Lorsqu'on fait un double tap sur l'ecran, il y a un message qui indique l'apropos du jeu : 
+
+\begin{center}
+    \includegraphics[scale = 0.5]{logos/doubletap.png}
+    \captionof{figure}{Double tap}
+\end{center}
+
+d - Localisation
+
+J'ai utilisé LocationManager pour afficher et récuperer l'adresse ou l'endroit exacte du joueur: 
+
 \begin{center}
     \includegraphics[scale = 0.5]{logos/geolocalisation.png}
-    \captionof{figure}{Capture localisation v2.0}
+    \captionof{figure}{Double tap}
 \end{center}
+
+e - Problème rencontré
+
+Dans la partie Android, j'ai eu de difficulté sur la mise en place de la géolocalisation avec la gestion de key maps. En effet, ça ne m'empêcha pas de creuser et trouver des solutions pour résoudre ce problème en utilisant les TP, support de cours et les liens utiles\cite{Cours} qu'on nous a donné en classe.
+
 \newpage
 \subsection{iOS}
 a - accueil
